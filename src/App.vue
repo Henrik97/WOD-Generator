@@ -1,4 +1,4 @@
-<script setup>
+<script lang="ts" setup>
 import topBar from './components/topBar.vue';
 import ApplicationPage from './views/applicationPage.vue';
 </script>
