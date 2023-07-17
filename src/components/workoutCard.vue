@@ -1,16 +1,15 @@
 <template>
     <v-card
-     :title="WorkoutFormat.workoutTitle"
-     :subtitle="WorkoutFormat.workoutTimeCap"
-     :text="WorkoutFormat.workoutDescription"
-     :key="workoutFormat.id"
-     variant="tonal"
+     :title="workoutTitle"
+     :subtitle="workoutTimeCap"
+     :text="workoutDescription"
+    
      height="300px"
      width="300px"
      >
      <v-card-action>
        <v-btn-toggle v-model="savedWorkout">
-            <v-btn icon="mdi-heart"></v-btn>
+            <v-btn :color="savedWorkout ? 'white' : 'red'" icon="mdi-heart">save</v-btn>
         </v-btn-toggle>
      </v-card-action>
 
@@ -19,10 +18,13 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import  { WorkoutFormat } from '../models/workoutFormat'
+import  {WorkoutFormat} from '../models/workoutStructure';
+
 
 defineProps<{
-  workoutFormat: WorkoutFormat
+  workoutTitle: string,
+  workoutTimeCap: string,
+  workoutDescription:string
 }>();
 
 

@@ -1,9 +1,20 @@
 <template>
-    <v-sheet height="100%" color="blue"></v-sheet>
+    <v-sheet class="main-content">
+        <LeaderboardTable></LeaderboardTable>
+    </v-sheet>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import LeaderboardTable from '../components/leaderboardTable.vue'
+
+</script>
 
 <style lang="scss" scoped>
+.main-content{
+    height: 100%;
+    width: 100%;
+    background-color: blueviolet;
+}
+
 
 </style>

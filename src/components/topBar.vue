@@ -13,7 +13,7 @@
 <script lang="ts" setup>
 import {ref} from 'vue';
 import router from '../router';
-const page = ref(1);
+const page = ref(0);
 
 const tabs = ref([{title: "Workout", path: '/'}, {title: "Leader Board", path:'/leader-board'}, {title:"Profile", path: '/profile'}])
 
